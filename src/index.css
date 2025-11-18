@@ -66,3 +66,25 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* 웹앱 형태를 위한 미디어 쿼리 */
+@media (max-width: 400px) and (max-height: 860px) {
+  body {
+    background-color: #f0f0f0; /* 웹앱 바깥 배경색 */
+  }
+
+  .app-container {
+    width: 100vw;
+    height: 100vh;
+    max-width: 400px;
+    max-height: 860px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* 웹앱 내부 배경색 */
+    overflow-y: auto; /* 내용이 길어지면 스크롤 */
+  }
+
+  :root {
+    background-color: #ffffff; /* 웹앱 내부 배경색과 일치 */
+  }
+}
