@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import landingImage from "../assets/landing.svg";
 
 function LandingPage() {
+  const navigate = useNavigate();
   const [ripples, setRipples] = useState([]);
   const [particles, setParticles] = useState([]);
   const [stars, setStars] = useState([]);
@@ -45,6 +47,11 @@ function LandingPage() {
     setTimeout(() => {
       setRipples((prev) => prev.filter((r) => r.id !== newRipple.id));
     }, 600);
+
+    // PhotoPage로 이동
+    setTimeout(() => {
+      navigate("/photo");
+    }, 300);
   };
 
   // 별 파티클 생성 (화면 곳곳에 반짝이는 효과)

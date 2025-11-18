@@ -4,6 +4,7 @@ import App from '../App';
 
 import LandingPage from '../pages/LandingPage';
 import ErrorPage from '../pages/ErrorPage';
+import PhotoPage from '../pages/PhotoPage';
 
 const router = createBrowserRouter([
 	{
@@ -15,10 +16,10 @@ const router = createBrowserRouter([
 				index: true,
 				element: <LandingPage />,
 			},
-			// {
-			// 	path: "memberSignUp",
-			// 	element: <MemberSignUp />,
-			// },
+			{
+				path: "photo",
+				element: <PhotoPage />,
+			},
         ]
     }
 ]);
