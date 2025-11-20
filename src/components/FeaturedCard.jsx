@@ -45,16 +45,15 @@ function FeaturedCard({ description, image, onClick }) {
           left: 0,
           right: 0,
           padding: "12px 24px 10px 24px",
-          background: "rgba(214, 219, 255, 0.85)",
-          // backdropFilter: "blur(2px)",
-          // WebkitBackdropFilter: "blur(2px)",
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
         }}
       >
         {/* 설명 */}
         {description && (
           <div
             style={{
-              color: "#000000",
+              color: "#FFFFFF",
               fontSize: "14px",
               fontWeight: "700",
               textAlign: "center",
