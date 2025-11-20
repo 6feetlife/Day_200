@@ -5,6 +5,8 @@ import App from '../App';
 import LandingPage from '../pages/LandingPage';
 import ErrorPage from '../pages/ErrorPage';
 import PhotoPage from '../pages/PhotoPage';
+import LetterPage from '../pages/LetterPage';
+import ByePage from '../pages/ByePage';
 
 const router = createBrowserRouter([
 	{
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
 				path: "photo",
 				element: <PhotoPage />,
 			},
+			{
+				path: "letter",
+				element: <LetterPage />,
+			},
+			{
+				path: "bye",
+				element: <ByePage />,
+			}
         ]
     }
 ]);

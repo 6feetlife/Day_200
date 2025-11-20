@@ -1,6 +1,7 @@
 import React from "react";
 
 function PhotoCard({ title, subtitle, image, onClick }) {
+
   return (
     <div
       onClick={onClick}
@@ -27,7 +28,7 @@ function PhotoCard({ title, subtitle, image, onClick }) {
           bottom: 0,
           left: 0,
           right: 0,
-          padding: "14px 16px",
+          padding: "10px 16px",
           backdropFilter: "blur(10px)",
           WebkitBackdropFilter: "blur(10px)",
         }}
