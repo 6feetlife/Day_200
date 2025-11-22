@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-function ImageCarouselModal({ images, description, isOpen, onClose }) {
+function ImageCarouselModal({ images, description, descriptions, isOpen, onClose }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  
+  // 모달이 열릴 때마다 currentIndex를 0으로 리셋
+  useEffect(() => {
+    if (isOpen) {
+      setCurrentIndex(0);
+    }
+  }, [isOpen, images]);
   
   // 현재 이미지의 앞뒤 이미지 미리 로드
   useEffect(() => {
@@ -213,7 +220,18 @@ function ImageCarouselModal({ images, description, isOpen, onClose }) {
           }}
           onClick={(e) => e.stopPropagation()}
         >
-          {description && (
+          {(descriptions && descriptions[currentIndex]) ? (
+            <p
+              style={{
+                color: "#FFFFFF",
+                fontSize: "16px",
+                fontWeight: "400",
+                margin: "0 0 90px 0",
+              }}
+            >
+              {descriptions[currentIndex]}
+            </p>
+          ) : description ? (
             <p
               style={{
                 color: "#FFFFFF",
@@ -224,7 +242,7 @@ function ImageCarouselModal({ images, description, isOpen, onClose }) {
             >
               {description}
             </p>
-          )}
+          ) : null}
         </div>
       </motion.div>
     </AnimatePresence>
