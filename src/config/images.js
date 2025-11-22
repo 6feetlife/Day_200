@@ -131,11 +131,11 @@ export const IMAGE_PATHS = {
     'pyeongtaek/pyeongtaek_02.jpg',
     'pyeongtaek/pyeongtaek_03.jpg',
     'pyeongtaek/pyeongtaek_04.jpg',
-    'pyeongtaek/pyeongtaek_05.jpeg',
+    // 'pyeongtaek/pyeongtaek_05.jpeg',
     'pyeongtaek/pyeongtaek_06.jpeg',
     'pyeongtaek/pyeongtaek_07.jpeg',
-    'pyeongtaek/pyeongtaek_08.jpeg',
-    'pyeongtaek/pyeongtaek_09.jpeg',
+    // 'pyeongtaek/pyeongtaek_08.jpeg',
+    // 'pyeongtaek/pyeongtaek_09.jpeg',
   ],
   
   // 삽교 이미지들

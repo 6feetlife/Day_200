@@ -4,6 +4,13 @@ import { motion, AnimatePresence } from "framer-motion";
 function ImageCarouselModal({ images, description, isOpen, onClose }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   
+  // 모달이 열릴 때마다 currentIndex를 0으로 리셋
+  useEffect(() => {
+    if (isOpen) {
+      setCurrentIndex(0);
+    }
+  }, [isOpen, images]);
+  
   // 현재 이미지의 앞뒤 이미지 미리 로드
   useEffect(() => {
     if (!isOpen || images.length === 0) return;
